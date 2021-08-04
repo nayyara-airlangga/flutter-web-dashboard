@@ -15,10 +15,12 @@ class SiteLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: scaffoldKey,
       appBar: topNavigationBar(
         context: context,
         key: scaffoldKey,
       ),
+      drawer: Drawer(),
       body: ResponsiveWidget(
         largeScreen: LargeScreen(),
         smallScreen: SmallScreen(),

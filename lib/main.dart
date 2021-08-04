@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'layout.dart';
+import 'site_layout.dart';
 
 void main() {
   runApp(MyApp());
