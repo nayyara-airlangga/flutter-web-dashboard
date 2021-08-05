@@ -47,9 +47,10 @@ class RevenueSectionLarge extends StatelessWidget {
               ],
             ),
           ),
+          const SizedBox(width: 8),
           Container(
-            height: 120,
             width: 1,
+            height: 250,
             color: lightGrey,
           ),
           Expanded(

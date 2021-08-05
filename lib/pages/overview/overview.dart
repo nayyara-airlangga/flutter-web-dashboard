@@ -9,6 +9,7 @@ import 'widgets/overview_cards_layout_medium.dart';
 import 'widgets/overview_cards_layout_small.dart';
 import 'widgets/revenue_section_large.dart';
 import 'widgets/revenue_section_small.dart';
+import 'widgets/available_drivers.dart';
 
 class OverviewPage extends StatelessWidget {
   const OverviewPage({
@@ -50,6 +51,7 @@ class OverviewPage extends StatelessWidget {
                 RevenueSectionLarge()
               else
                 RevenueSectionSmall(),
+              AvailableDrivers(),
             ],
           ),
         ),
