@@ -110,5 +110,5 @@ AppBar topNavigationBar({
         ),
       ),
       iconTheme: IconThemeData(color: dark),
-      backgroundColor: Colors.transparent,
+      backgroundColor: light,
     );
