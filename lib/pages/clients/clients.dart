@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
+import '../../constants/controllers.dart';
+import '../../helpers/responsive_widget.dart';
 import '../../widgets/custom_text.dart';
 
 class ClientsPage extends StatelessWidget {
@@ -9,10 +12,25 @@ class ClientsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: CustomText(
-        text: 'Clients',
-      ),
+    return Column(
+      children: [
+        Obx(
+          () => Row(
+            children: [
+              Container(
+                margin: EdgeInsets.only(
+                  top: ResponsiveWidget.isSmallScreen(context) ? 56 : 6,
+                ),
+                child: CustomText(
+                  text: menuController.activeItem.value,
+                  size: 24,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ],
     );
   }
 }
