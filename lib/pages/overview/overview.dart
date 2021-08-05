@@ -7,6 +7,8 @@ import '../../widgets/custom_text.dart';
 import 'widgets/overview_cards_layout_large.dart';
 import 'widgets/overview_cards_layout_medium.dart';
 import 'widgets/overview_cards_layout_small.dart';
+import 'widgets/revenue_section_large.dart';
+import 'widgets/revenue_section_small.dart';
 
 class OverviewPage extends StatelessWidget {
   const OverviewPage({
@@ -44,6 +46,10 @@ class OverviewPage extends StatelessWidget {
                   OverviewCardsLayoutLarge()
               else
                 OverviewCardsLayoutSmall(),
+              if (!ResponsiveWidget.isSmallScreen(context))
+                RevenueSectionLarge()
+              else
+                RevenueSectionSmall(),
             ],
           ),
         ),
