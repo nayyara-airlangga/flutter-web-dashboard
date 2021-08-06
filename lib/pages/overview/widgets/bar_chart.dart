@@ -28,7 +28,7 @@ class SimpleBarChart extends StatelessWidget {
   static List<charts.Series<OrdinalSales, String>> _createSampleData() {
     final data = [
       new OrdinalSales('Today', 55),
-      new OrdinalSales('Yesterday', 25),
+      new OrdinalSales('4 Aug', 25),
       new OrdinalSales('3 Aug', 100),
       new OrdinalSales('2 Aug', 75),
       new OrdinalSales('1 Aug', 65),

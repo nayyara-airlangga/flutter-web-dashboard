@@ -6,7 +6,7 @@ class NavigationController extends GetxController {
   final GlobalKey<NavigatorState> navigationKey = GlobalKey();
 
   Future<dynamic> navigateTo(String routeName) =>
-      navigationKey.currentState.pushNamed(routeName);
+      navigationKey.currentState.pushReplacementNamed(routeName);
 
   dynamic goBack() => navigationKey.currentState.pop();
 }

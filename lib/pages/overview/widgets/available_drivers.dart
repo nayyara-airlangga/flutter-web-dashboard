@@ -5,7 +5,6 @@ import 'package:flutter/rendering.dart';
 import '../../../constants/style.dart';
 import '../../../widgets/custom_text.dart';
 
-/// Example without datasource
 class AvailableDrivers extends StatelessWidget {
   const AvailableDrivers();
 
@@ -103,7 +102,7 @@ class AvailableDrivers extends StatelessWidget {
                         vertical: 6,
                       ),
                       child: CustomText(
-                        text: 'Available',
+                        text: 'Assign Delivery',
                         color: active.withOpacity(0.7),
                         fontWeight: FontWeight.bold,
                       ),

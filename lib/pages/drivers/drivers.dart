@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import '../../widgets/custom_text.dart';
 import '../../constants/controllers.dart';
 import '../../helpers/responsive_widget.dart';
+import 'widgets/drivers_table.dart';
 
 class DriversPage extends StatelessWidget {
   const DriversPage({
@@ -19,7 +20,7 @@ class DriversPage extends StatelessWidget {
             children: [
               Container(
                 margin: EdgeInsets.only(
-                  top: ResponsiveWidget.isSmallScreen(context) ? 56 : 6,
+                  top: ResponsiveWidget.isSmallScreen(context) ? 56 : 12,
                 ),
                 child: CustomText(
                   text: menuController.activeItem.value,
@@ -27,6 +28,13 @@ class DriversPage extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
+            ],
+          ),
+        ),
+        Expanded(
+          child: ListView(
+            children: [
+              DriversTable(),
             ],
           ),
         ),

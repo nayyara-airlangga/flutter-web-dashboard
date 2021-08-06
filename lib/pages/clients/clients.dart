@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import '../../constants/controllers.dart';
 import '../../helpers/responsive_widget.dart';
 import '../../widgets/custom_text.dart';
+import 'widgets/clients_table.dart';
 
 class ClientsPage extends StatelessWidget {
   const ClientsPage({
@@ -19,7 +20,7 @@ class ClientsPage extends StatelessWidget {
             children: [
               Container(
                 margin: EdgeInsets.only(
-                  top: ResponsiveWidget.isSmallScreen(context) ? 56 : 6,
+                  top: ResponsiveWidget.isSmallScreen(context) ? 56 : 12,
                 ),
                 child: CustomText(
                   text: menuController.activeItem.value,
@@ -27,6 +28,13 @@ class ClientsPage extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
+            ],
+          ),
+        ),
+        Expanded(
+          child: ListView(
+            children: [
+              ClientsTable(),
             ],
           ),
         ),
