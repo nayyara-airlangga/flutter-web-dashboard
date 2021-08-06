@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:web_dashboard/pages/authentication/authentication.dart';
 
 import 'constants/style.dart';
 import 'controllers/menu_controller.dart';
 import 'controllers/navigation_controller.dart';
-import 'site_layout.dart';
+import 'pages/authentication/authentication.dart';
 
 void main() {
   Get.put(MenuController());
@@ -38,7 +39,7 @@ class MyApp extends StatelessWidget {
         ),
         primaryColor: Colors.blue,
       ),
-      home: SiteLayout(),
+      home: AuthenticationPage(),
     );
   }
 }

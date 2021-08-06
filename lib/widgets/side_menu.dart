@@ -7,6 +7,7 @@ import '../helpers/responsive_widget.dart';
 import '../routing/routes.dart';
 import '../widgets/custom_text.dart';
 import '../widgets/side_menu_item.dart';
+import '../pages/authentication/authentication.dart';
 
 class SideMenu extends StatelessWidget {
   const SideMenu({
@@ -58,7 +59,7 @@ class SideMenu extends StatelessWidget {
                         : itemName,
                     onTap: () {
                       if (itemName == AuthenticationPageRoute) {
-                        //TODO: go to authentication page
+                        Get.offAll(() => AuthenticationPage());
                       }
                       if (!menuController.isActive(itemName)) {
                         menuController.changeActiveItemTo(itemName);
