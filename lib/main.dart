@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:web_dashboard/pages/authentication/authentication.dart';
 
+import '../routing/routes.dart';
+import 'site_layout.dart';
 import 'constants/style.dart';
 import 'controllers/menu_controller.dart';
 import 'controllers/navigation_controller.dart';
+import 'pages/404/error_page.dart';
 import 'pages/authentication/authentication.dart';
 
 void main() {
@@ -22,6 +24,22 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      initialRoute: AuthenticationPageRoute,
+      unknownRoute: GetPage(
+        name: '/not-found',
+        page: () => Error404Page(),
+        transition: Transition.fadeIn,
+      ),
+      getPages: [
+        GetPage(
+          name: RootRoute,
+          page: () => SiteLayout(),
+        ),
+        GetPage(
+          name: AuthenticationPageRoute,
+          page: () => AuthenticationPage(),
+        ),
+      ],
       debugShowCheckedModeBanner: false,
       title: "Web Dashboard",
       theme: ThemeData(
@@ -39,7 +57,6 @@ class MyApp extends StatelessWidget {
         ),
         primaryColor: Colors.blue,
       ),
-      home: AuthenticationPage(),
     );
   }
 }

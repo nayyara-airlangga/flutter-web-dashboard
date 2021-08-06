@@ -7,7 +7,6 @@ import '../helpers/responsive_widget.dart';
 import '../routing/routes.dart';
 import '../widgets/custom_text.dart';
 import '../widgets/side_menu_item.dart';
-import '../pages/authentication/authentication.dart';
 
 class SideMenu extends StatelessWidget {
   const SideMenu({
@@ -33,7 +32,7 @@ class SideMenu extends StatelessWidget {
                     ),
                     Padding(
                       padding: const EdgeInsets.only(right: 12),
-                      child: Image.asset('icons/logo.png'),
+                      child: Image.asset('assets/icons/logo.png'),
                     ),
                     Flexible(
                       child: CustomText(
@@ -53,18 +52,18 @@ class SideMenu extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             children: sideMenuItems
                 .map(
-                  (itemName) => SideMenuItem(
-                    itemName: itemName == AuthenticationPageRoute
-                        ? 'Log Out'
-                        : itemName,
+                  (menuItem) => SideMenuItem(
+                    itemName: menuItem.name,
                     onTap: () {
-                      if (itemName == AuthenticationPageRoute) {
-                        Get.offAll(() => AuthenticationPage());
+                      if (menuItem.route == AuthenticationPageRoute) {
+                        menuController
+                            .changeActiveItemTo(OverviewPageDisplayName);
+                        Get.offAllNamed(AuthenticationPageRoute);
                       }
-                      if (!menuController.isActive(itemName)) {
-                        menuController.changeActiveItemTo(itemName);
+                      if (!menuController.isActive(menuItem.name)) {
+                        menuController.changeActiveItemTo(menuItem.name);
                         if (ResponsiveWidget.isSmallScreen(context)) Get.back();
-                        navigationController.navigateTo(itemName);
+                        navigationController.navigateTo(menuItem.route);
                       }
                     },
                   ),

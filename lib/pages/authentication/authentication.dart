@@ -4,7 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../../constants/style.dart';
 import '../../widgets/custom_text.dart';
-import '../../site_layout.dart';
+import '../../routing/routes.dart';
 
 class AuthenticationPage extends StatelessWidget {
   const AuthenticationPage({
@@ -23,7 +23,7 @@ class AuthenticationPage extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  Image.asset('icons/logo.png'),
+                  Image.asset('assets/icons/logo.png'),
                   Expanded(child: Container()),
                 ],
               ),
@@ -81,7 +81,7 @@ class AuthenticationPage extends StatelessWidget {
               const SizedBox(height: 15),
               InkWell(
                 onTap: () {
-                  Get.offAll(() => SiteLayout());
+                  Get.offAllNamed(RootRoute);
                 },
                 child: Container(
                   alignment: Alignment.center,
