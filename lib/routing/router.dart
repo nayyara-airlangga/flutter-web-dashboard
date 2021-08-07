@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../pages/overview/overview.dart';
 import '../pages/drivers/drivers.dart';
 import '../pages/clients/clients.dart';
+import '../pages/404/error_page.dart';
 import 'routes.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {
@@ -17,7 +18,7 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return _getPageRoute(ClientsPage());
 
     default:
-      return _getPageRoute(OverviewPage());
+      return _getPageRoute(Error404Page());
   }
 }
 

@@ -1,4 +1,5 @@
-const String RootRoute = '/';
+const String rootRoute = '/';
+const String errorRoute = '/not-found';
 
 const String OverviewPageDisplayName = 'Overview';
 const String OverviewPageRoute = '/overview';

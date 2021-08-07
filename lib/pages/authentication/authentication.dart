@@ -81,7 +81,7 @@ class AuthenticationPage extends StatelessWidget {
               const SizedBox(height: 15),
               InkWell(
                 onTap: () {
-                  Get.offAllNamed(RootRoute);
+                  Get.offAllNamed(OverviewPageRoute);
                 },
                 child: Container(
                   alignment: Alignment.center,
